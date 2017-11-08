@@ -1,0 +1,293 @@
+//ABC001
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  printf("%d\n", n - m);
+}
+
+//ABC002
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  if( n < m){
+    printf("%d\n", m);
+  }else{
+    printf("%d\n", n);
+  }
+}
+
+//ABC003
+//question A
+#include <stdio.h>
+
+int main(void){
+  int i,n,m,s;
+  i = 1;
+  scanf("%d",&n);
+  while (i <= n ){
+    m += i * 10000; 
+    i++;
+  }
+  s = m / n;
+  printf("%d?n", s);
+}
+
+//ABC004
+//question A
+#include <stdio.h>
+
+int main(void){
+  int i,n,m,s;
+  scanf("%d",&n);
+  m = n * 2;
+  printf("%d\n", m);
+}
+
+//ABC005
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  printf("%d\n", m / n);
+}
+
+//ABC006
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  m = n % 3;
+  if( m == 0){
+    printf("YES\n");
+  }else{
+    printf("NO\n");
+  }
+}
+
+//ABC007
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n;
+  scanf("%d",&n);
+  printf("%d\n",n -1);
+}
+
+//ABC008
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  printf("%d\n", m - n + 1);
+}
+
+//ABC009
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  printf("%d\n", n / 2 + n % 2);
+}
+
+//ABC010
+//question A
+#include <stdio.h>
+
+int main(void)
+{
+  char str[32];
+  scanf("%s",str);
+  sprintf(str,"%s%s\n",str,"pp");
+  printf(str);
+}
+
+//ABC011
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n;
+  scanf("%d",&n);
+  if( n == 12 ){
+    printf("%d\n", 1);
+  }else{
+    printf("%d\n", n + 1 );
+  }
+}
+
+//ABC012
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  printf("%d%s%d\n", m," ",n);
+}
+
+//ABC013
+//question A
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "ABCDE";
+    char s[2];
+    int n;
+    scanf("%s",s);
+    n = 0;
+    while (str[n] != s[0]) {
+        n++;
+    }
+    printf("%d\n",n + 1);
+}
+
+//ABC014
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m,i;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  i = n % m;
+  if( i == 0 ){
+    printf("%d\n",0);
+  }else{
+    printf("%d\n",m - i);
+  }
+}
+
+//ABC015
+//question A
+#include <stdio.h>
+#include <string.h>
+int main(void){
+  char l[100],s[100];
+  int n,m;
+
+  scanf("%s",l);
+  scanf("%s",s);
+  n = strlen( l );
+  m = strlen( s );
+
+  if( n < m){
+    printf( "%s", s );
+  }else{
+    printf( "%s", l );
+  }
+}
+
+//ABC016
+//question A
+#include <stdio.h>
+
+int main(void){
+  int n,m;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  m = n % m;
+  if( m == 0){
+    printf("YES\n");
+  }else{
+    printf("NO\n");
+  }
+}
+
+//ABC017
+//question A
+#include <stdio.h>
+
+int main(void){
+  static char line[64];
+  int a, b, n, m;
+  m = 0;
+  while (fgets(line, sizeof(line), stdin) != NULL) {
+    sscanf(line, "%d %d", &a, &b);
+    n = a * b / 10;
+    m += n;
+    }
+    printf("%d\n",m);
+}
+
+//ABC018
+//question A
+#include <stdio.h>
+
+int main(void){
+  static char line[64];
+  int n[3];
+  int r[3] = {1,1,1};
+  int a, i, j;
+  i = 0;
+  while (fgets(line, sizeof(line), stdin) != NULL) {
+    sscanf(line, "%d", &a);
+    n[i] = a;
+    i++;
+  }
+  for (i = 0;i < 3; i++){
+    for(j = 0;j < 3; j++){
+      if(n[i] < n[j]){
+        r[i]++;
+      }
+    }
+  }
+  printf("%d\n", r[0]);
+  printf("%d\n", r[1]);
+  printf("%d\n", r[2]);
+}
+
+//ABC019
+//question A
+#include <stdio.h>
+
+int main(void){
+  int a,b,c, i, j, t;
+  scanf("%d %d %d", &a, &b, &c);
+  int n[ ] = {a, b, c};
+  for(i = 0;i < 2; i++){
+    for(j = 2; j > i; j--){
+      if(n[j] < n[j-1]){
+      t = n[j-1];
+      n[j-1] = n[j];
+      n[j] = t;
+      }
+    }
+  }
+  printf("%d\n", n[1]);
+}
+
+//ABC020
+//question A
+#include <stdio.h>
+
+int main(void){
+  int a;
+  scanf("%d", &a);
+  if(a == 1){
+    printf("%s\n","ABC")
+  }else{
+    printf("%s\n","chokudai")
+  }
+}
+
