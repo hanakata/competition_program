@@ -1,0 +1,10 @@
+(defun main ()
+  (let ((n (read)) (i 1) (m 0) (l 0))
+  (loop
+    (if (> i n)(return m))
+    (setq l (* i 10000))
+    (setq m (+ m l))
+    (setq i (+ i 1)))
+  (write (/ m n)))
+  (fresh-line))
+(main)
