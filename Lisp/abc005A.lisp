@@ -1,0 +1,6 @@
+(defun main ()
+  (let ((a (read)))
+  (let ((b (read)))
+  (write (floor (/ b a)))))
+  (fresh-line))
+(main)
