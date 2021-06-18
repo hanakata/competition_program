@@ -1,0 +1,11 @@
+(defun main ()
+  (let ((m 0))
+  (loop
+    (let ((a (read nil nil))(b (read nil nil))(l 0)(n 0))
+    (if (eql a NIL)(return m))
+      (setq l (* a b))
+      (setq n (/ l 10))
+      (setq m (+ n m))))
+    (write m))
+    (fresh-line))
+(main)

@@ -1,0 +1,6 @@
+(defun main ()
+  (let ((a (read)))
+  (let ((b (read)))
+  (if(= (mod a b) 0) (princ "YES") (princ "NO"))))
+  (fresh-line))
+(main)

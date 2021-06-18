@@ -1,0 +1,5 @@
+n = int(input())
+h = "{0:02d}".format(n // 3600)
+m = "{0:02d}".format((n - (int(h) * 3600)) // 60)
+s = "{0:02d}".format(n - ((int(h) * 3600) + (int(m) * 60)))
+print(h + ":" + m + ":" + s)

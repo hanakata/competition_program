@@ -1,0 +1,12 @@
+(defun main ()
+  (let ((n (make-array 3 :initial-contents '(0 0 0))))
+  (let ((i 0))
+  (loop
+    (let ((a (read nil nil)))
+    (if (eql a NIL)(return n))
+      (setf (aref n i) a)
+      (setq i (+ i 1))))
+  (sort n #'<)
+  (write (aref n 1))
+  (fresh-line))))
+(main)

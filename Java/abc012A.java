@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+class Main{
+  public static void main(String args[]){
+    Scanner scan = new Scanner(System.in);
+    String n = scan.nextLine();
+    String[] s = n.split(" ", 0);
+    System.out.println(s[1] + " " + s[0]);
+  }
+}

@@ -1,0 +1,6 @@
+(defun main ()
+  (let ((n (read)))
+  (let ((m (read)))
+  (if(= (mod n m) 0) (write 0) (write (- m (mod n m))))))
+  (fresh-line))
+(main)

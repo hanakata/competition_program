@@ -1,0 +1,6 @@
+(defun main ()
+  (let ((l (read-line)))
+  (let ((s (read-line)))
+  (if (< (length l) (length s)) (princ s) (princ l))))
+  (fresh-line))
+(main)
