@@ -1,0 +1,5 @@
+n = input().split()
+a = list(n[0])
+b = list(n[1])
+c = list(n[2])
+print(a[0] + b[0] + c[0])
