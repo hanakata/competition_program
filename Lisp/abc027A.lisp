@@ -1,0 +1,11 @@
+(defun main ()
+  (setf a (read))
+  (setf b (read))
+  (setf c (read))
+  (cond 
+    ((= a b) (write c))
+    ((= a c) (write b))
+    (T (write a))
+  )
+  (fresh-line))
+(main)

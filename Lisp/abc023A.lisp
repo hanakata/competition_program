@@ -1,0 +1,5 @@
+(defun main ()
+  (setf a (read))
+  (write (+ (floor (/ a 10)) (mod a 10)))
+  (fresh-line))
+(main)
